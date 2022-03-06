@@ -45,7 +45,7 @@ public class App extends Application {
         Scene scene = new Scene(root, 500, 500);  
 
         //Setting title to the Stage 
-        stage.setTitle("Code of Duteeeeeeehhh");  
+        stage.setTitle("CodeOfDuty");  
 
         //Adding scene to the stage 
         stage.setScene(scene);
