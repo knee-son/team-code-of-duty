@@ -7,21 +7,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox
+   xmlns="http://javafx.com/javafx/13"
+   xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="com.fifths.body_events">
   <children>
-    <AnchorPane style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);;" VBox.vgrow="ALWAYS">
+    <Pane style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022)" VBox.vgrow="ALWAYS">
       <children>
-            <Circle fill="#1f96ff00" layoutX="446.0" layoutY="200.0" radius="152.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0" />
-            <Pane layoutX="50.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
-               <children>
-                  <ImageView fitHeight="200.0" fitWidth="133.0" layoutX="34.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../guitar_chord.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
+         <Circle fx:id="circle_outline" fill="#1f96ff00" radius="152.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0" />
+         <Pane fx:id="fingering_guide" layoutX="50.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+            <children>
+               <ImageView fitHeight="200.0" fitWidth="133.0" layoutX="34.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../guitar_chord.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
       </children>
-    </AnchorPane>
+    </Pane>
   </children>
 </VBox>

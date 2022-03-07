@@ -7,6 +7,6 @@ public class cover_events {
 
     @FXML
     private void button_pressed() throws IOException {
-        App.setRoot("body");
+        App.setRoot("body_modified");
     }
 }
