@@ -24,7 +24,7 @@ public class App extends Application {
         // scene = new Scene(loadFXML("primary"), 640, 480);
         // stage.setScene(scene);
         // stage.show();
-        
+    
         //Creating an image 
         Image image = new Image(new FileInputStream("demo/src/main/resources/chart.png"));  
 
