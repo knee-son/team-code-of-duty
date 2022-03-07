@@ -23,6 +23,7 @@ public class App extends Application {
         stage.setMaximized(true);
         stage.show();
 
+        // //-- sample without using .fxml--
         // //Creating an image 
         // Image image = new Image(new FileInputStream("demo/src/main/resources/chart.png"));  
         // //Setting the image view 
