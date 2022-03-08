@@ -14,55 +14,29 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-
         scene = new Scene(loadFXML("cover"));
         stage.setScene(scene);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of edb2dc5 (revert to main)
+=======
+>>>>>>> parent of a9fec6b (Revert "changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience")
         Image icon = new Image("enderpeal.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("Circle of Fifths");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
         stage.setMaximized(true);
 >>>>>>> parent of c62eac8 (changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience)
 >>>>>>> parent of edb2dc5 (revert to main)
+=======
+>>>>>>> parent of a9fec6b (Revert "changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience")
         stage.show();
-
-        // //-- sample without using .fxml--
-        // //Creating an image 
-        // Image image = new Image(new FileInputStream("demo/src/main/resources/chart.png"));  
-        // //Setting the image view 
-        // ImageView imageView = new ImageView(image);
-        // //setting the fit height and width of the image view 
-        // imageView.setFitHeight(500); 
-        // imageView.setFitWidth(500);
-        // //Setting the preserve ratio of the image view 
-        // imageView.setPreserveRatio(false);
-
-        // //Creating a Button
-        // Button button = new Button();
-        // //Setting text to the button
-        // button.setText("play sound");
-        // //Setting the location of the button
-        // button.setTranslateX(212);
-        // button.setTranslateY(460);
-
-        // //Creating a Group object  
-        // Group root = new Group(imageView,button);
-        // //Creating a scene object
-        // Scene scene = new Scene(root);  
-        // //Setting title to the Stage
-        // stage.setTitle("Code of Dutyyy ✊😭");
-        // //Adding scene to the stage 
-        // stage.setScene(scene);
-        // stage.setMaximized(true);
-        // //Displaying the contents of the stage 
-        // stage.show(); 
     }
 
     static void setRoot(String fxml) throws IOException {
