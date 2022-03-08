@@ -23,11 +23,11 @@
    xmlns:fx="http://javafx.com/fxml/1"
    fx:controller="com.fifths.cover_events">
       <children>
-         <Label text="Main Menu" />
+         <Label text="Welcome to Circle of Fifths" />
          <Button
             fx:id="primaryButton"
             onAction="#button_pressed"
-            text="go to Circle of Fifths" />
+            text="Proceed" />
          <PointLight>
             <color>
                <Color red="1.0" blue="0.6014319658279419" />
