@@ -17,10 +17,20 @@ public class App extends Application {
 
         scene = new Scene(loadFXML("cover"));
         stage.setScene(scene);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of edb2dc5 (revert to main)
         Image icon = new Image("enderpeal.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("Circle of Fifths");
+<<<<<<< HEAD
+=======
+=======
+        stage.setMaximized(true);
+>>>>>>> parent of c62eac8 (changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience)
+>>>>>>> parent of edb2dc5 (revert to main)
         stage.show();
 
         // //-- sample without using .fxml--
