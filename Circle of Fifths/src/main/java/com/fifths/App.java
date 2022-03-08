@@ -17,14 +17,7 @@ public class App extends Application {
 
         scene = new Scene(loadFXML("cover"));
         stage.setScene(scene);
-<<<<<<< HEAD
-        Image icon = new Image("enderpeal.png");
-        stage.getIcons().add(icon);
-        stage.setResizable(false);
-        stage.setTitle("Circle of Fifths");
-=======
         stage.setMaximized(true);
->>>>>>> parent of c62eac8 (changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience)
         stage.show();
 
         // //-- sample without using .fxml--
