@@ -16,26 +16,10 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("cover"));
         stage.setScene(scene);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of edb2dc5 (revert to main)
-=======
->>>>>>> parent of a9fec6b (Revert "changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience")
-        Image icon = new Image("enderpeal.png");
+        Image icon = new Image("enderpearl.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("Circle of Fifths");
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-        stage.setMaximized(true);
->>>>>>> parent of c62eac8 (changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience)
->>>>>>> parent of edb2dc5 (revert to main)
-=======
->>>>>>> parent of a9fec6b (Revert "changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience")
         stage.show();
     }
 

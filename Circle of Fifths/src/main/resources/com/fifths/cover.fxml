@@ -43,8 +43,4 @@
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </padding>
-<<<<<<< HEAD
 </VBox>
-=======
-</VBox>
->>>>>>> parent of a9fec6b (Revert "changed resolution to 850x600; edited body.fxml in scenebuilder; wrapped contents into containers for convenience")
