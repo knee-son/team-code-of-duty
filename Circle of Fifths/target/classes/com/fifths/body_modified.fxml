@@ -51,11 +51,6 @@
             <Image url="@../../chart_outline.png" />
          </image>
       </ImageView>
-      <Circle fill="#202022" layoutX="512.0" layoutY="306.0" radius="90.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0">
-         <cursor>
-            <Cursor fx:constant="DEFAULT" />
-         </cursor>
-      </Circle>
       <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -116,6 +111,11 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
+      <Circle fill="#202022" layoutX="512.0" layoutY="306.0" radius="90.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Circle>
       <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="38.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../diaShov.png" />
