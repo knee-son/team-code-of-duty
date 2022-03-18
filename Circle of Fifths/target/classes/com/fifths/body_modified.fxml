@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
    <children>
       <VBox layoutY="28.0" spacing="8.0">
@@ -42,7 +41,6 @@
             <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
          </padding>
       </VBox>
-<<<<<<< HEAD
       <ImageView fitHeight="252.0" fitWidth="155.0" layoutX="42.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guitar_chord.png" />
@@ -138,110 +136,10 @@
             <Font name="Calibri Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="73.0" fitWidth="93.0" layoutX="772.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="73.0" fitWidth="93.0" layoutX="772.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../komi.png" />
          </image>
       </ImageView>
-=======
-      <HBox alignment="CENTER" prefHeight="600.0" prefWidth="850.0">
-         <children>
-            <ImageView fitHeight="189.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../guitar_chord.png" />
-               </image>
-               <HBox.margin>
-                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-               </HBox.margin>
-            </ImageView>
-            <StackPane prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <ImageView fitHeight="520.0" fitWidth="520.0">
-                     <image>
-                        <Image url="@../../chart_outline.png" />
-                     </image>
-                  </ImageView>
-                  <GridPane alignment="CENTER" StackPane.alignment="TOP_LEFT">
-                    <columnConstraints>
-                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" length="30.0" onMousePressed="#play_C" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="50.0" length="30.0" onMousePressed="#play_G" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" length="30.0" onMousePressed="#play_D" radiusX="260.0" radiusY="260.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="50.0" length="30.0" onMousePressed="#play_A" radiusX="260.0" radiusY="260.0" startAngle="330.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="50.0" length="30.0" onMousePressed="#play_E" radiusX="260.0" radiusY="260.0" startAngle="300.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="50.0" length="30.0" onMousePressed="#play_B" radiusX="260.0" radiusY="260.0" startAngle="270.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="50.0" length="30.0" onMousePressed="#play_Gb" radiusX="260.0" radiusY="260.0" startAngle="240.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="-210.0" length="30.0" onMousePressed="#play_Db" radiusX="260.0" radiusY="260.0" startAngle="210.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="-210.0" length="30.0" onMousePressed="#play_Ab" radiusX="260.0" radiusY="260.0" startAngle="180.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="50.0" length="30.0" onMousePressed="#play_Eb" radiusX="260.0" radiusY="260.0" startAngle="150.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="-80.0" length="30.0" onMousePressed="#play_Bb" radiusX="260.0" radiusY="260.0" startAngle="120.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                        <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="10.0" layoutY="-80.0" length="30.0" onMousePressed="#play_F" radiusX="260.0" radiusY="260.0" startAngle="90.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Arc>
-                     </children>
-                  </GridPane>
-                  <Circle fill="#202022" radius="90.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0">
-                     <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                     </cursor>
-                  </Circle>
-               </children>
-            </StackPane>
-         </children>
-      </HBox>
->>>>>>> 6022e17254bb588e77378cf3338ca1ec9725d141
    </children>
 </Pane>
