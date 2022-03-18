@@ -13,11 +13,8 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
-=======
-<Pane style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
->>>>>>> 6022e17254bb588e77378cf3338ca1ec9725d141
    <children>
       <VBox layoutY="28.0" spacing="8.0">
          <children>
