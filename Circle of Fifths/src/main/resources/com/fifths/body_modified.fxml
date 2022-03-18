@@ -17,11 +17,11 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<Pane style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1">
+<Pane style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox spacing="8.0">
          <children>
-            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="piano" textFill="#ffffffef">
+            <RadioButton fx:id="pianoBtn" mnemonicParsing="false" onAction="#choosePiano" opacity="0.91" selected="true" text="Piano" textFill="#ffffffef">
                <font>
                   <Font name="Calibri" size="15.0" />
                </font>
@@ -32,7 +32,7 @@
                   <ToggleGroup fx:id="instrument" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="guitar" textFill="#ffffffef" toggleGroup="$instrument">
+            <RadioButton fx:id="guitarBtn" layoutX="45.0" layoutY="45.0" mnemonicParsing="false" onAction="#chooseGuitar" opacity="0.91" text="Guitar" textFill="#ffffffef" toggleGroup="$instrument">
                <font>
                   <Font name="Calibri" size="15.0" />
                </font>
