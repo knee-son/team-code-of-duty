@@ -8,12 +8,12 @@ import javafx.animation.FadeTransition;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.VBox;
+import javafx.scene.shape.Box;
 import javafx.util.Duration;
 
 public class cover_events implements Initializable{
 
-    @FXML private VBox mybox;
+    @FXML private Box mybox;
     
     @FXML
     private void button_pressed() throws IOException {
