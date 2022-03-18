@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 
 public class cover_events implements Initializable{
 
+    //@FXML private Box mybox;
+
     @FXML
     private void button_pressed() throws IOException {
         App.setRoot("body_modified");
