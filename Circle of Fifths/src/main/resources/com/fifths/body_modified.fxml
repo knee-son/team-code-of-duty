@@ -126,7 +126,7 @@
             <Image url="@../../diaPick.png" />
          </image>
       </ImageView>
-      <Label layoutX="81.0" layoutY="540.0" text="Major Chord" textFill="#3bf2e8">
+      <Label layoutX="80.0" layoutY="540.0" text="Major Chord" textFill="#3bf2e8">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>
