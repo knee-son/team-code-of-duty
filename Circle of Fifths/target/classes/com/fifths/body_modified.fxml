@@ -21,7 +21,7 @@
    <children>
       <VBox spacing="8.0">
          <children>
-            <RadioButton fx:id="pianoBtn" mnemonicParsing="false" onAction="#choosePiano" opacity="0.91" selected="true" text="Piano" textFill="#ffffffef">
+            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#ffffffef">
                <font>
                   <Font name="Calibri" size="15.0" />
                </font>
@@ -32,7 +32,7 @@
                   <ToggleGroup fx:id="instrument" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="guitarBtn" layoutX="45.0" layoutY="45.0" mnemonicParsing="false" onAction="#chooseGuitar" opacity="0.91" text="Guitar" textFill="#ffffffef" toggleGroup="$instrument">
+            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#ffffffef" toggleGroup="$instrument">
                <font>
                   <Font name="Calibri" size="15.0" />
                </font>
