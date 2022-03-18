@@ -41,7 +41,7 @@
             <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
          </padding>
       </VBox>
-      <ImageView fitHeight="189.0" fitWidth="161.0" layoutX="55.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="252.0" fitWidth="155.0" layoutX="42.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../guitar_chord.png" />
          </image>
@@ -136,7 +136,7 @@
             <Font name="Calibri Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="73.0" fitWidth="93.0" layoutX="772.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="73.0" fitWidth="93.0" layoutX="772.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../komi.png" />
          </image>
