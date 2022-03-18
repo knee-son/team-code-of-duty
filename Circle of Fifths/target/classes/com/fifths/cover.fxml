@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Box?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="626.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="626.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.cover_events">
    <children>
       <ImageView fitHeight="626.0" fitWidth="922.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="175.0" layoutY="147.0" text="Welcome to Circle of Fifths" textFill="#650b0b">
