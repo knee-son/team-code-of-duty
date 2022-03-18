@@ -22,7 +22,6 @@ public class cover_events implements Initializable{
    
     @Override
     public void initialize(URL u, ResourceBundle r) {
-        // TODO Auto-generated method stub
         FadeTransition ft = new FadeTransition(Duration.millis(3000), mybox);
         ft.setFromValue(1.0);
         ft.setToValue(0.1);
