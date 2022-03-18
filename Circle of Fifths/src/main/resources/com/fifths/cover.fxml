@@ -29,7 +29,7 @@
          </color>
       </PointLight>
       <PerspectiveCamera fieldOfView="14.7" layoutX="461.0" layoutY="335.0" />
-      <Box cullFace="FRONT" depth="100" height="100" layoutX="455.0" layoutY="365.0" rotate="71.6" width="100">
+      <Box fx:id="mybox" cullFace="FRONT" depth="100" height="100" layoutX="455.0" layoutY="365.0" rotate="71.6" width="100">
          <rotationAxis>
             <Point3D y="1.0" z="1.0" />
          </rotationAxis>
