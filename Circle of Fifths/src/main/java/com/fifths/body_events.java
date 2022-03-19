@@ -10,42 +10,25 @@ import javafx.scene.media.MediaPlayer;
 public class body_events {
     @FXML private Circle circle_outline;
     @FXML private Pane fingering_guide;
-
+    private File f;
+    private Media hit;
+    private MediaPlayer mediaPlayer;
+    
     //Piano Keys
     @FXML
     private void play_Ab(){
-        File f = new File("Circle of Fifths/src/main/resources/piano_notes/pno030.mp3");
-        Media hit;
-        MediaPlayer mediaPlayer;
-        System.out.println("Ab is pressed | "+f.toURI().toString());
-        hit = new Media(f.toURI().toString());
-        mediaPlayer = new MediaPlayer(hit);
-        mediaPlayer.play();
+        play(30);
     }
     @FXML
     private void play_A(){
-        File f = new File("Circle of Fifths/src/main/resources/piano_notes/pno033.mp3");
-        Media hit;
-        MediaPlayer mediaPlayer;
-        System.out.println("A is pressed | "+f.toURI().toString());
-        hit = new Media(f.toURI().toString());
-        mediaPlayer = new MediaPlayer(hit);
-        mediaPlayer.play();
+        play(33);
     }
     @FXML
     private void play_Bb(){}
     @FXML
     private void play_B(){}
     @FXML
-    private void play_C(){
-        File f = new File("Circle of Fifths/src/main/resources/piano_notes/pno057.mp3");
-        Media hit;
-        MediaPlayer mediaPlayer;
-        System.out.println("C is pressed | "+f.toURI().toString());
-        hit = new Media(f.toURI().toString());
-        mediaPlayer = new MediaPlayer(hit);
-        mediaPlayer.play();
-    }
+    private void play_C(){}
     @FXML
     private void play_Db(){}
     @FXML
@@ -60,4 +43,11 @@ public class body_events {
     private void play_Gb(){}
     @FXML
     private void play_G(){}
+
+    private void play(int key){
+        f = new File("Circle of Fifths/src/main/resources/piano_notes/pno0"+key+".mp3");
+        hit = new Media(f.toURI().toString());
+        mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
+    }
 }
