@@ -17,7 +17,7 @@ public class body_events {
     //Piano Keys
     @FXML
     private void play_Ab(){
-        play(30);
+        
     }
     @FXML
     private void play_A(){
@@ -44,7 +44,9 @@ public class body_events {
     @FXML
     private void play_F(){}
     @FXML
-    private void play_Gb(){}
+    private void play_Gb(){
+        play(30);
+    }
     @FXML
     private void play_G(){}
 
