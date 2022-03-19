@@ -28,7 +28,7 @@
                   <ToggleGroup fx:id="instrument" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" selected="true" text="Guitar" textFill="#3cf0e4f0" toggleGroup="$instrument">
+            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#3cf0e4f0" toggleGroup="$instrument">
                <font>
                   <Font name="Calibri Bold" size="15.0" />
                </font>
