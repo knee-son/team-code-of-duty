@@ -24,7 +24,9 @@ public class body_events {
         play(33);
     }
     @FXML
-    private void play_Bb(){}
+    private void play_Bb(){
+        play(36);
+    }
     @FXML
     private void play_B(){}
     @FXML
