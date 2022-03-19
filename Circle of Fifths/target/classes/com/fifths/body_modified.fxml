@@ -51,17 +51,17 @@
             <Image url="@../../chart_outline.png" />
          </image>
       </ImageView>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Arc>
       <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_C" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_G" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Arc>
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_D" radiusX="260.0" radiusY="260.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -71,12 +71,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="300.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_E" radiusX="260.0" radiusY="260.0" startAngle="300.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="270.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_B" radiusX="260.0" radiusY="260.0" startAngle="270.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -86,12 +86,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="210.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_Db" radiusX="260.0" radiusY="260.0" startAngle="210.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="180.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_Ab" radiusX="260.0" radiusY="260.0" startAngle="180.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -101,12 +101,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_B" radiusX="260.0" radiusY="260.0" startAngle="120.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_Bb" radiusX="260.0" radiusY="260.0" startAngle="120.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Arc>
-      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="90.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+      <Arc centerX="260.0" centerY="260.0" fill="#0d134a40" layoutX="252.0" layoutY="46.0" length="30.0" onMousePressed="#play_F" radiusX="260.0" radiusY="260.0" startAngle="90.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
