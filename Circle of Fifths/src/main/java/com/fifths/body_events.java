@@ -10,10 +10,17 @@ import javafx.scene.media.MediaPlayer;
 public class body_events {
     @FXML private Circle circle_outline;
     @FXML private Pane fingering_guide;
-    
+
     //Piano Keys
     @FXML
     private void play_Ab(){
+        File f = new File("Circle of Fifths/src/main/resources/piano_notes/pno030.mp3");
+        Media hit;
+        MediaPlayer mediaPlayer;
+        System.out.println("Ab is pressed | "+f.toURI().toString());
+        hit = new Media(f.toURI().toString());
+        mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
     }
     @FXML
     private void play_A(){}
