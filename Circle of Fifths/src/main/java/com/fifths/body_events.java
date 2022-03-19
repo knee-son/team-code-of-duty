@@ -23,7 +23,15 @@ public class body_events {
         mediaPlayer.play();
     }
     @FXML
-    private void play_A(){}
+    private void play_A(){
+        File f = new File("Circle of Fifths/src/main/resources/piano_notes/pno033.mp3");
+        Media hit;
+        MediaPlayer mediaPlayer;
+        System.out.println("A is pressed | "+f.toURI().toString());
+        hit = new Media(f.toURI().toString());
+        mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
+    }
     @FXML
     private void play_Bb(){}
     @FXML
