@@ -10,7 +10,8 @@ import javafx.scene.media.MediaPlayer;
 public class body_events {
     @FXML private Circle circle_outline;
     @FXML private Pane fingering_guide;
-
+    
+    //Piano Keys
     @FXML
     private void play_Ab(){
     }
