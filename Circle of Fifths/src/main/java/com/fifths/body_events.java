@@ -29,16 +29,20 @@ public class body_events {
     }
     @FXML
     private void play_B(){
-        play(36);
+        
     }
     @FXML
-    private void play_C(){}
+    private void play_C(){
+        play(36);
+    }
     @FXML
     private void play_Db(){}
     @FXML
     private void play_D(){}
     @FXML
-    private void play_Eb(){}
+    private void play_Eb(){
+        play(39);
+    }
     @FXML
     private void play_E(){}
     @FXML
