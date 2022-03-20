@@ -21,8 +21,8 @@ public class body_events implements Initializable{
     private MediaPlayer mp_fifth;
 
     private int octave = 48;
-    private boolean is_major_3rd = true;
-    private boolean is_major_7th = true;
+    private int is_major_3rd = 1;
+    private int is_major_7th = 1;
     // -1:diminished, 0:neutral, 1:augmented
     private byte is_neutral_5th = 0;
 
@@ -54,7 +54,9 @@ public class body_events implements Initializable{
     private void play(int key_without_octave){
         int key = key_without_octave+octave;
         mp_root = new MediaPlayer(note_array[key]);
-        mp_root.play();
+        mp_third = new MediaPlayer(note_array[key+3+is_major_3rd]);
+        mp_fifth = new MediaPlayer(note_array[key+7+is_neutral_5th]); 
+        mp_root.play(); mp_third.play(); mp_fifth.play();
     }
 
     // private void octave_up(){octave+=12;}
