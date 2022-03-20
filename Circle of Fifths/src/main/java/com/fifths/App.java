@@ -16,7 +16,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("cover"));
         stage.setScene(scene);
-        Image icon = new Image("enderpearl.png");
+        Image icon = new Image("chart.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
         stage.setTitle("Circle of Fifths");
