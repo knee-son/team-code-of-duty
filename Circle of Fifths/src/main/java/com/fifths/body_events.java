@@ -1,5 +1,8 @@
 package com.fifths;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
@@ -9,6 +12,7 @@ import java.util.ResourceBundle;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 
@@ -19,6 +23,9 @@ public class body_events implements Initializable{
     private MediaPlayer mp_root;
     private MediaPlayer mp_third;
     private MediaPlayer mp_fifth;
+
+    // para fadeout
+    private Timeline fadeout;
 
     // for the neutral fifth variable:
     // -1:diminished, 0:neutral, 1:augmented
@@ -35,17 +42,32 @@ public class body_events implements Initializable{
             note_array[i] = new Media(new File("Circle of Fifths/src/main/"+
                 "resources/piano_notes/pno0"+i+".mp3").toURI().toString());
         
-        // makes each circle segment clickable. left or right click.
+        // iterate on every circle segment:
         int j=0;
-        for (Node arc : arcs_container.getChildrenUnmodifiable()) {
-            final Integer concrete_integer = Integer.valueOf(j*7%12);
-            arc.setOnMouseClicked(event -> {
+        for (Node arc : arcs_container.getChildrenUnmodifiable()){
+        //makes each segment clickable
+            final Integer concrete_integer = Integer.valueOf(j++*7%12);
+
+            arc.setOnMousePressed(event -> {
                 if (event.getButton() == MouseButton.PRIMARY)
                     is_major_3rd = 1;
                 else if (event.getButton() == MouseButton.SECONDARY)
                     is_major_3rd = 0;
                 play(concrete_integer);
-            }); j++;}
+            //andamon daan ang para fadeout
+                fadeout = new Timeline(
+                    new KeyFrame(Duration.millis(250), new KeyValue(
+                        mp_root.volumeProperty(), 0)),
+                    new KeyFrame(Duration.millis(250), new KeyValue(
+                        mp_third.volumeProperty(), 0)),
+                    new KeyFrame(Duration.millis(250), new KeyValue(
+                        mp_fifth.volumeProperty(), 0)) );
+            });
+
+        //fades out sound once mouse isn't clicked
+            arc.setOnMouseReleased(event -> {
+                 fadeout.play(); });
+        }
     }
 
     private void play(int key_without_octave){
