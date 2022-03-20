@@ -45,9 +45,6 @@
             <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
          </padding>
       </VBox>
-      
-      
-      
       <StackPane layoutX="299.0" layoutY="53.0" prefHeight="150.0" prefWidth="200.0">
          <children>
             <ImageView fitHeight="520.0" fitWidth="520.0">
@@ -55,7 +52,7 @@
                   <Image url="@../../chart_outline.png" />
                </image>
             </ImageView>
-            <GridPane alignment="CENTER" StackPane.alignment="TOP_LEFT">
+            <GridPane fx:id="arcs_container" alignment="CENTER" StackPane.alignment="TOP_LEFT">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -65,12 +62,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="50.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Arc>
-                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="50.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="30.0" stroke="#ffffffe8" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -139,7 +136,6 @@
             <Image url="@../../guitar_chord.png" />
          </image>
       </ImageView>
-
       <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="38.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../diaShov.png" />
