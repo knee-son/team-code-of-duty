@@ -136,22 +136,22 @@
             <Image url="@../../guitar_chord.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="32.0" layoutX="38.0" layoutY="533.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="23.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../diaShov.png" />
+            <Image url="@../../leftClick.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="37.0" fitWidth="26.0" layoutX="41.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="75.0" fitWidth="63.0" layoutX="23.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../diaPick.png" />
+            <Image url="@../../rightClick.png" />
          </image>
       </ImageView>
-      <Label layoutX="80.0" layoutY="540.0" text="Major Chord" textFill="#3bf2e8">
+      <Label layoutX="80.0" layoutY="504.0" text="Major Chord" textFill="#3bf2e8">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="80.0" layoutY="578.0" text="Minor Chord" textFill="#3bf2e8">
+      <Label layoutX="79.0" layoutY="569.0" text="Minor Chord" textFill="#3bf2e8">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>
