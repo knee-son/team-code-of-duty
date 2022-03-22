@@ -15,13 +15,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Arc?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="218.0" layoutX="17.0" layoutY="236.0" stroke="#3bf2e8" strokeType="INSIDE" strokeWidth="3.0" width="260.0" />
       <VBox layoutY="28.0" spacing="8.0">
          <children>
-            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#e8e42af0">
+            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#00ffffe5">
                <font>
                   <Font name="Calibri Bold" size="15.0" />
                </font>
@@ -32,7 +34,7 @@
                   <ToggleGroup fx:id="instrument" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#3cf0e4f0" toggleGroup="$instrument">
+            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#fff716f0" toggleGroup="$instrument">
                <font>
                   <Font name="Calibri Bold" size="15.0" />
                </font>
@@ -131,9 +133,9 @@
             </Circle>
          </children>
       </StackPane>
-      <ImageView fitHeight="252.0" fitWidth="155.0" layoutX="42.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="208.0" fitWidth="251.0" layoutX="23.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../guitar_chord.png" />
+            <Image url="@../../pianoKey.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="23.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
@@ -161,5 +163,6 @@
             <Image url="@../../komi.png" />
          </image>
       </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="53.0" layoutX="17.0" layoutY="177.0" stroke="#3bf2e8" strokeType="INSIDE" strokeWidth="3.0" width="260.0" />
    </children>
 </Pane>
