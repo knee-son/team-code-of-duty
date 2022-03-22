@@ -148,7 +148,7 @@
             <Image url="@../../rightClick.png" />
          </image>
       </ImageView>
-      <Label layoutX="80.0" layoutY="504.0" text="Major Chord" textFill="#3bf2e8">
+      <Label layoutX="79.0" layoutY="504.0" text="Major Chord" textFill="#3bf2e8">
          <font>
             <Font name="Calibri Bold" size="15.0" />
          </font>
