@@ -19,63 +19,75 @@ import javafx.scene.input.MouseButton;
 public class body_events implements Initializable{
     @FXML private GridPane arcs_container;
 
-    private static Media[] note_array = new Media[98];
-    private MediaPlayer mp_root;
-    private MediaPlayer mp_third;
-    private MediaPlayer mp_fifth;
+    private static MediaPlayer[] note_array = new MediaPlayer[98];
 
     // para fadeout
     private Timeline fadeout;
 
+    // auto inversion: used to do the % operator
+    // para ma fit sa octave kada key
     // for the neutral fifth variable:
     // -1:diminished, 0:neutral, 1:augmented
     private byte
+        auto_inversion = 12,
         octave = 48,
         is_major_3rd = 1,
         is_neutral_5th = 0,
         is_major_7th = 1;
+    
+    private byte[] current_chord = new byte[3];
 
     @Override
     public void initialize(URL u, ResourceBundle r){
         // reads mp3 into RAM
         for(int i=30; i<=97; i++)
-            note_array[i] = new Media(new File("Circle of Fifths/src/main/"+
-                "resources/piano_notes/pno0"+i+".mp3").toURI().toString());
+            note_array[i] =
+                new MediaPlayer( new Media( new File(
+                    "Circle of Fifths/src/main/"+
+                    "resources/piano_notes/pno0"+
+                    i+".mp3").toURI().toString()));
         
         // iterate on every circle segment:
         int j=0;
         for (Node arc : arcs_container.getChildrenUnmodifiable()){
-        //makes each segment clickable
-            final Integer concrete_integer = Integer.valueOf(j++*7%12);
+        // makes each segment clickable
+            final Integer key = Integer.valueOf(j++*7%12);
 
             arc.setOnMousePressed(event -> {
                 if (event.getButton() == MouseButton.PRIMARY)
                     is_major_3rd = 1;
                 else if (event.getButton() == MouseButton.SECONDARY)
                     is_major_3rd = 0;
-                play(concrete_integer);
-            //andamon daan ang para fadeout
+                play(key);
+            // andamon daan ang para fadeout
                 fadeout = new Timeline(
-                    new KeyFrame(Duration.millis(250), new KeyValue(
-                        mp_root.volumeProperty(), 0)),
-                    new KeyFrame(Duration.millis(250), new KeyValue(
-                        mp_third.volumeProperty(), 0)),
-                    new KeyFrame(Duration.millis(250), new KeyValue(
-                        mp_fifth.volumeProperty(), 0)) );
+                    new KeyFrame(Duration.millis(200), new KeyValue(
+                        note_array[current_chord[0]].volumeProperty(),0)),
+                    new KeyFrame(Duration.millis(200), new KeyValue(
+                        note_array[current_chord[1]].volumeProperty(),0)),
+                    new KeyFrame(Duration.millis(200), new KeyValue(
+                        note_array[current_chord[2]].volumeProperty(),0)));
             });
 
-        //fades out sound once mouse isn't clicked
-            arc.setOnMouseReleased(event -> {
-                 fadeout.play(); });
+        // fades out sound once mouse isn't clicked
+            arc.setOnMouseReleased(event -> { fadeout.play(); });            
         }
     }
 
-    private void play(int key_without_octave){
-        int key = key_without_octave+octave;
-        mp_root = new MediaPlayer(note_array[key]);
-        mp_third = new MediaPlayer(note_array[key+3+is_major_3rd]);
-        mp_fifth = new MediaPlayer(note_array[key+7+is_neutral_5th]); 
-        mp_root.play(); mp_third.play(); mp_fifth.play();
+    private void play(int key){
+        if(current_chord[0] != 0){
+            for(byte note: current_chord){
+                note_array[note].stop();
+                note_array[note].setVolume(1); }}
+
+        current_chord[0] = (byte)(key+octave);
+        current_chord[1] = (byte)((key+3)%auto_inversion+is_major_3rd+octave);
+        current_chord[2] = (byte)((key+7)%auto_inversion+is_neutral_5th+octave);
+        
+        if(fadeout != null) fadeout.stop();
+
+        for(byte note: current_chord)
+            note_array[note].play();
     }
 
     private void octave_up(){if(octave!=84) octave+=12;}

@@ -24,7 +24,6 @@ public class cover_events implements Initializable{
         FadeTransition ft = new FadeTransition(Duration.millis(3000), pane);
         ft.setFromValue(0);
         ft.setToValue(1);
-        ft.setAutoReverse(true);
         ft.play();
     }
 }
