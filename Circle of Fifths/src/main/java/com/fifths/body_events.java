@@ -14,6 +14,9 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 
 public class body_events implements Initializable{
@@ -88,8 +91,18 @@ public class body_events implements Initializable{
 
         for(byte note: current_chord)
             note_array[note].play();
+        
     }
 
     private void octave_up(){if(octave!=84) octave+=12;}
     private void octave_down(){if(octave!=36) octave-=12;}
+
+    //guide panel
+    /*ImageView guide_View;
+    Button buttonA;
+    Image pianoImage = new Image(getClass().getResourceAsStream("pianoKeyA.png"));
+
+    public void displayImageGuide() {
+        guide_View.setImage(pianoImage);
+    }*/
 }
