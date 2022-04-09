@@ -98,11 +98,9 @@ public class body_events implements Initializable{
     private void octave_down(){if(octave!=36) octave-=12;}
 
     //guide panel
-    /*ImageView guide_View;
-    Button buttonA;
-    Image pianoImage = new Image(getClass().getResourceAsStream("pianoKeyA.png"));
-
-    public void displayImageGuide() {
+    ImageView guide_View;
+    public void displayImageGuide() {   
+        Image pianoImage = new Image(getClass().getResourceAsStream("Circle of Fifths/src/main/resources/piano_guideKeys/pianoKeyC.png"));
         guide_View.setImage(pianoImage);
-    }*/
+    }
 }

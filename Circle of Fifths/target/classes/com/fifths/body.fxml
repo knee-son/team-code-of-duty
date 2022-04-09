@@ -133,7 +133,7 @@
             </Circle>
          </children>
       </StackPane>
-      <ImageView fitHeight="151.0" fitWidth="196.0" layoutX="52.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="guide_View" fitHeight="151.0" fitWidth="196.0" layoutX="52.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../piano_guideKeys/pianoKeyDefault.png" />
          </image>
