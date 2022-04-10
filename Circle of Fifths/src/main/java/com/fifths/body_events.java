@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 import java.io.File;
+import java.io.FileInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -40,6 +41,8 @@ public class body_events implements Initializable{
     
     private byte[] current_chord = new byte[3];
 
+    private ImageView guide_View;
+
     @Override
     public void initialize(URL u, ResourceBundle r){
         // reads mp3 into RAM
@@ -49,7 +52,7 @@ public class body_events implements Initializable{
                     "Circle of Fifths/src/main/"+
                     "resources/piano_notes/pno0"+
                     i+".mp3").toURI().toString()));
-        
+
         // iterate on every circle segment:
         int j=0;
         for (Node arc : arcs_container.getChildrenUnmodifiable()){
@@ -90,9 +93,8 @@ public class body_events implements Initializable{
         if(fadeout != null) fadeout.stop();
 
         for(byte note: current_chord) {
-    note_array[note].play();
+            note_array[note].play();    
         }
-        
         
     }
 
@@ -100,9 +102,8 @@ public class body_events implements Initializable{
     private void octave_down(){if(octave!=36) octave-=12;}
 
     //guide panel
-    ImageView guide_View;
     public void displayImageGuide() {   
         Image pianoImage = new Image(getClass().getResourceAsStream("Circle of Fifths/src/main/resources/piano_guideKeys/pianoKeyC.png"));
-        guide_View.setImage(pianoImage);
+        guide_View.setImage(pianoImage); 
     }
 }
