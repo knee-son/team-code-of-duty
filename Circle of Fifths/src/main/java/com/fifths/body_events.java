@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 import java.io.File;
-import java.io.FileInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,13 +14,13 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 
 public class body_events implements Initializable{
     @FXML private GridPane arcs_container;
+    @FXML private ImageView guide_View;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
 
@@ -40,8 +39,6 @@ public class body_events implements Initializable{
         is_major_7th = 1;
     
     private byte[] current_chord = new byte[3];
-
-    private ImageView guide_View;
 
     @Override
     public void initialize(URL u, ResourceBundle r){
@@ -81,6 +78,12 @@ public class body_events implements Initializable{
     }
 
     private void play(int key){
+        // para ilis sa chord guide
+        String[] keystring = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
+        Image pianoImage = new Image(
+            "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystring[key]+".png");
+        guide_View.setImage(pianoImage);
+
         if(current_chord[0] != 0){
             for(byte note: current_chord){
                 note_array[note].stop();
@@ -92,18 +95,16 @@ public class body_events implements Initializable{
         
         if(fadeout != null) fadeout.stop();
 
-        for(byte note: current_chord) {
-            note_array[note].play();    
-        }
+        for(byte note: current_chord) note_array[note].play();
         
     }
 
     private void octave_up(){if(octave!=84) octave+=12;}
     private void octave_down(){if(octave!=36) octave-=12;}
 
-    //guide panel
-    public void displayImageGuide() {   
-        Image pianoImage = new Image(getClass().getResourceAsStream("Circle of Fifths/src/main/resources/piano_guideKeys/pianoKeyC.png"));
-        guide_View.setImage(pianoImage); 
-    }
+    // //guide panel
+    // public void displayImageGuide() {   
+    //     Image pianoImage = new Image(getClass().getResourceAsStream("Circle of Fifths/src/main/resources/piano_guideKeys/pianoKeyC.png"));
+    //     guide_View.setImage(pianoImage); 
+    // }
 }
