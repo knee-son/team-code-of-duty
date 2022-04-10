@@ -89,8 +89,10 @@ public class body_events implements Initializable{
         
         if(fadeout != null) fadeout.stop();
 
-        for(byte note: current_chord)
-            note_array[note].play();
+        for(byte note: current_chord) {
+    note_array[note].play();
+        }
+        
         
     }
 
