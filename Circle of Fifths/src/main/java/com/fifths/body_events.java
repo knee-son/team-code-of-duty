@@ -22,6 +22,7 @@ public class body_events implements Initializable{
     @FXML private GridPane arcs_container;
     @FXML private ImageView guide_View;
     @FXML private ImageView guide_LetterKey;
+    @FXML private ImageView guide_Keyboard;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
 
