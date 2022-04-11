@@ -89,41 +89,19 @@ public class body_events implements Initializable{
 
     private void play(int key, int keySelected){
         // para ilis sa chord guide
-        String[] keystringMajor = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
-        String[] keystringMinor = {"Cm","Dbm","Dm","Ebm","Em","Fm","Gbm","Gm","Abm","Am","Bbm","Bm"};
+        String[] keystrings = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
+        String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
+        String keystring = keystrings[key] + (is_major_3rd==0 ? "m":"") + ".png";
 
-        if(keySelected == 1){
-            //show major key
-            Image pianoImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMajor[key]+".png");
-            //show key letter
-            Image letterImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMajor[key]+".png");
-                //show key letter
-            Image keyboardImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeyboard/guideKeyboard"+keystringMajor[key]+".png");
-            guide_View.setImage(pianoImage);
-            guide_LetterKey.setImage(letterImage);
-            guide_Keyboard.setImage(keyboardImage);
-        }
-        else if(keySelected == 2){
-            //show minor key
-            Image pianoImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMinor[key]+".png");
-            // show key letter
-            Image letterImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMinor[key]+".png");
-            Image keyboardImage = new Image(
-                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeyboard/guideKeyboard"+keystringMajor[key]+".png");
-            guide_View.setImage(pianoImage);
-            guide_LetterKey.setImage(letterImage);
-            guide_Keyboard.setImage(keyboardImage);
-        }
+        guide_View.setImage(new Image(dir+"pianoKey"+keystring));
+        guide_LetterKey.setImage(new Image(dir+"guideKeys_Letters/letterKey"+keystring));
+        guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboard"+keystring));
         
-        if(current_chord[0] != 0){
+
+        if(current_chord[0] != 0)
             for(byte note: current_chord){
                 note_array[note].stop();
-                note_array[note].setVolume(1); }}
+                note_array[note].setVolume(1); }
 
         current_chord[0] = (byte)(key+octave);
         current_chord[1] = (byte)((key+3)%auto_inversion+is_major_3rd+octave);
@@ -137,10 +115,4 @@ public class body_events implements Initializable{
 
     private void octave_up(){if(octave!=84) octave+=12;}
     private void octave_down(){if(octave!=36) octave-=12;}
-
-    // //guide panel
-    // public void displayImageGuide() {   
-    //     Image pianoImage = new Image(getClass().getResourceAsStream("Circle of Fifths/src/main/resources/piano_guideKeys/pianoKeyC.png"));
-    //     guide_View.setImage(pianoImage); 
-    // }
 }
