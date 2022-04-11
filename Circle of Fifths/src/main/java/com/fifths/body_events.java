@@ -42,6 +42,7 @@ public class body_events implements Initializable{
 
     @Override
     public void initialize(URL u, ResourceBundle r){
+
         // reads mp3 into RAM
         for(int i=30; i<=97; i++)
             note_array[i] =
@@ -57,11 +58,18 @@ public class body_events implements Initializable{
             final Integer key = Integer.valueOf(j++*7%12);
 
             arc.setOnMousePressed(event -> {
-                if (event.getButton() == MouseButton.PRIMARY)
+                //to know if minor or major is selected
+                int keySelect = 0;
+
+                if (event.getButton() == MouseButton.PRIMARY){
                     is_major_3rd = 1;
-                else if (event.getButton() == MouseButton.SECONDARY)
+                    keySelect = 1;
+                }
+                else if (event.getButton() == MouseButton.SECONDARY){
                     is_major_3rd = 0;
-                play(key);
+                    keySelect = 2;
+                }       
+                play(key, keySelect);
             // andamon daan ang para fadeout
                 fadeout = new Timeline(
                     new KeyFrame(Duration.millis(200), new KeyValue(
@@ -77,14 +85,24 @@ public class body_events implements Initializable{
         }
     }
 
-    private void play(int key){
+    private void play(int key, int keySelected){
         // para ilis sa chord guide
-        String[] keystring = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B",
-        "Cm","Dbm","Dm","Ebm","Em","Fm","Gbm","Gm","Abm","Am","Bbm","Bm"};
-        Image pianoImage = new Image(
-            "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystring[key]+".png");
-        guide_View.setImage(pianoImage);
+        String[] keystringMajor = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
+        String[] keystringMinor = {"Cm","Dbm","Dm","Ebm","Em","Fm","Gbm","Gm","Abm","Am","Bbm","Bm"};
 
+        if(keySelected == 1){
+            //show major key
+            Image pianoImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMajor[key]+".png");
+            guide_View.setImage(pianoImage);
+        }
+        else if(keySelected == 2){
+            //show minor key
+            Image pianoImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMinor[key]+".png");
+            guide_View.setImage(pianoImage);
+        }
+        
         if(current_chord[0] != 0){
             for(byte note: current_chord){
                 note_array[note].stop();
