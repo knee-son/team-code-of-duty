@@ -21,6 +21,7 @@ import javafx.scene.input.MouseButton;
 public class body_events implements Initializable{
     @FXML private GridPane arcs_container;
     @FXML private ImageView guide_View;
+    @FXML private ImageView guide_LetterKey;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
 
@@ -94,13 +95,19 @@ public class body_events implements Initializable{
             //show major key
             Image pianoImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMajor[key]+".png");
+            Image letterImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMajor[key]+".png");
             guide_View.setImage(pianoImage);
+            guide_LetterKey.setImage(letterImage);
         }
         else if(keySelected == 2){
             //show minor key
             Image pianoImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMinor[key]+".png");
+            Image letterImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMinor[key]+".png");
             guide_View.setImage(pianoImage);
+            guide_LetterKey.setImage(letterImage);
         }
         
         if(current_chord[0] != 0){
