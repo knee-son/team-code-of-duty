@@ -95,6 +95,7 @@ public class body_events implements Initializable{
             //show major key
             Image pianoImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMajor[key]+".png");
+            //show key letter
             Image letterImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMajor[key]+".png");
             guide_View.setImage(pianoImage);
@@ -104,6 +105,7 @@ public class body_events implements Initializable{
             //show minor key
             Image pianoImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystringMinor[key]+".png");
+            // show key letter
             Image letterImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMinor[key]+".png");
             guide_View.setImage(pianoImage);
