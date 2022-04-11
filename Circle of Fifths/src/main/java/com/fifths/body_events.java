@@ -79,7 +79,8 @@ public class body_events implements Initializable{
 
     private void play(int key){
         // para ilis sa chord guide
-        String[] keystring = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
+        String[] keystring = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B",
+        "Cm","Dbm","Dm","Ebm","Em","Fm","Gbm","Gm","Abm","Am","Bbm","Bm"};
         Image pianoImage = new Image(
             "file:Circle of Fifths/src/main/resources/piano_guideKeys/pianoKey"+keystring[key]+".png");
         guide_View.setImage(pianoImage);
