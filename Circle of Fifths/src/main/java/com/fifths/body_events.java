@@ -89,7 +89,7 @@ public class body_events implements Initializable{
 
     private void play(int key, int keySelected){
         // para ilis sa chord guide
-        String[] keystrings = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
+        final String[] keystrings = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
         String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
         String keystring = keystrings[key] + (is_major_3rd==0 ? "m":"") + ".png";
 
