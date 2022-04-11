@@ -99,8 +99,12 @@ public class body_events implements Initializable{
             //show key letter
             Image letterImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMajor[key]+".png");
+                //show key letter
+            Image keyboardImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeyboard/guideKeyboard"+keystringMajor[key]+".png");
             guide_View.setImage(pianoImage);
             guide_LetterKey.setImage(letterImage);
+            guide_Keyboard.setImage(keyboardImage);
         }
         else if(keySelected == 2){
             //show minor key
@@ -109,8 +113,11 @@ public class body_events implements Initializable{
             // show key letter
             Image letterImage = new Image(
                 "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeys_Letters/letterKey"+keystringMinor[key]+".png");
+            Image keyboardImage = new Image(
+                "file:Circle of Fifths/src/main/resources/piano_guideKeys/guideKeyboard/guideKeyboard"+keystringMajor[key]+".png");
             guide_View.setImage(pianoImage);
             guide_LetterKey.setImage(letterImage);
+            guide_Keyboard.setImage(keyboardImage);
         }
         
         if(current_chord[0] != 0){
