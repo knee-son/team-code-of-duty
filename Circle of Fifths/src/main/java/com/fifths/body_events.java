@@ -14,15 +14,17 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 import javafx.scene.Node;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 
-public class body_events implements Initializable{
+public class body_events implements Initializable {
     @FXML private GridPane arcs_container;
     @FXML private ImageView guide_View;
     @FXML private ImageView guide_LetterKey;
     @FXML private ImageView guide_Keyboard;
+    @FXML private ToggleGroup instrument;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
 
@@ -45,18 +47,13 @@ public class body_events implements Initializable{
     @Override
     public void initialize(URL u, ResourceBundle r){
 
-        // reads mp3 into RAM
-        for(int i=30; i<=97; i++)
-            note_array[i] =
-                new MediaPlayer( new Media( new File(
-                    "Circle of Fifths/src/main/"+
-                    "resources/piano_notes/pno0"+
-                    i+".mp3").toURI().toString()));
+        // loads mp3 into RAM on first use
+        switch_instrument(instrument.getSelectedToggle().toString());
 
         // iterate on every circle segment:
         int j=0;
         for (Node arc : arcs_container.getChildrenUnmodifiable()){
-        // makes each segment clickable
+            // makes each segment clickable
             final Integer key = Integer.valueOf(j++*7%12);
 
             arc.setOnMousePressed(event -> {
@@ -72,7 +69,7 @@ public class body_events implements Initializable{
                     keySelect = 2;
                 }       
                 play(key, keySelect);
-            // andamon daan ang para fadeout
+                // andamon daan ang para fadeout
                 fadeout = new Timeline(
                     new KeyFrame(Duration.millis(200), new KeyValue(
                         note_array[current_chord[0]].volumeProperty(),0)),
@@ -82,9 +79,13 @@ public class body_events implements Initializable{
                         note_array[current_chord[2]].volumeProperty(),0)));
             });
 
-        // fades out sound once mouse isn't clicked
-            arc.setOnMouseReleased(event -> { fadeout.play(); });            
+            // fades out sound once mouse isn't clicked
+            arc.setOnMouseReleased(event -> { fadeout.play(); });
         }
+        
+        // determines if nichange ba ug piano or guitar
+        instrument.selectedToggleProperty().addListener((a,b,c)->
+            switch_instrument(c.toString()));
     }
 
     private void play(int key, int keySelected){
@@ -96,7 +97,6 @@ public class body_events implements Initializable{
         guide_View.setImage(new Image(dir+"pianoKey"+keystring));
         guide_LetterKey.setImage(new Image(dir+"guideKeys_Letters/letterKey"+keystring));
         guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboard"+keystring));
-        
 
         if(current_chord[0] != 0)
             for(byte note: current_chord){
@@ -111,6 +111,28 @@ public class body_events implements Initializable{
 
         for(byte note: current_chord) note_array[note].play();
         
+    }
+
+    private void switch_instrument(String s){
+        for(int i=0; i<note_array.length; i++) note_array[i]=null;
+        
+        String instrument_name = s.substring(s.indexOf("'"));
+
+        if(instrument_name.equals("'Piano'"))
+            for(int i=30; i<=97; i++)
+                note_array[i] =
+                    new MediaPlayer( new Media( new File(
+                        "Circle of Fifths/src/main/"+
+                        "resources/piano_notes/pno0"+
+                        i+".mp3").toURI().toString()));
+        
+        else if(instrument_name.equals("'Guitar'"))
+            for(int i=40; i<=88; i++)
+                note_array[i] =
+                    new MediaPlayer( new Media( new File(
+                        "Circle of Fifths/src/main/"+
+                        "resources/guitar_notes/guitar_"+
+                        i+".wav").toURI().toString()));
     }
 
     private void octave_up(){if(octave!=84) octave+=12;}
