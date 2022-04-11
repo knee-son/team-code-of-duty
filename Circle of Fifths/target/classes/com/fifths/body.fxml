@@ -128,7 +128,7 @@
             <Font name="Calibri Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="73.0" fitWidth="93.0" layoutX="772.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="96.0" fitWidth="89.0" layoutX="803.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../komi.png" />
          </image>
