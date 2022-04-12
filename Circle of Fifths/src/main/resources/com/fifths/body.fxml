@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -15,10 +17,8 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ToggleGroup?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
+<Pane stylesheets="@stylesheet.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
    <children>
       <VBox layoutY="28.0" spacing="8.0">
          <children>
@@ -49,11 +49,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="160.0" layoutX="48.0" layoutY="189.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="188.0" />
       <StackPane layoutX="299.0" layoutY="53.0" prefHeight="150.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="520.0" fitWidth="520.0">
-               <image>
-                  <Image url="@../../chart_outline.png" />
-               </image>
-            </ImageView>
             <GridPane fx:id="arcs_container" alignment="CENTER" StackPane.alignment="TOP_LEFT">
                <columnConstraints>
                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -64,7 +59,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="50.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffffe8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                  <Arc centerX="260.0" centerY="260.0" fill="#1f93ff3f" layoutX="-120.0" layoutY="50.0" length="30.0" radiusX="260.0" radiusY="260.0" startAngle="60.0" stroke="#ffffff4d" strokeType="INSIDE" strokeWidth="2.0" styleClass="arc" type="ROUND" GridPane.columnIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -124,8 +119,18 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="60.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
                </children>
             </GridPane>
+            <ImageView fitHeight="520.0" fitWidth="520.0">
+               <image>
+                  <Image url="@../../chart_outline.png" />
+               </image>
+            </ImageView>
             <Circle fill="#202022" radius="90.0" stroke="#ffffffe1" strokeType="INSIDE" strokeWidth="3.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
