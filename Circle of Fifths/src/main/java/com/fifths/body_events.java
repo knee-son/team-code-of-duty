@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,10 +40,15 @@ public class body_events implements Initializable {
         auto_inversion = 12,
         octave = 48,
         is_major_3rd = 1,
-        is_neutral_5th = 0,
-        is_major_7th = 1;
+        is_neutral_5th = 0;
+        // is_major_7th = 1;
     
     private byte[] current_chord = new byte[3];
+
+    @FXML
+    private void tina_pressed() throws IOException {
+        App.setRoot("credits");
+    }
 
     @Override
     public void initialize(URL u, ResourceBundle r){
@@ -134,6 +140,6 @@ public class body_events implements Initializable {
 
     }
 
-    private void octave_up(){if(octave!=84) octave+=12;}
-    private void octave_down(){if(octave!=36) octave-=12;}
+    // private void octave_up(){if(octave!=84) octave+=12;}
+    // private void octave_down(){if(octave!=36) octave-=12;}
 }

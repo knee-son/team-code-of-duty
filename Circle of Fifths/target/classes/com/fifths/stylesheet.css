@@ -1,46 +1,38 @@
 Arc,
 Circle {
+    stroke: #141414d4;
     -fx-stroke: #141414d4;
 }
 
 Arc {
+    fill: #685dc635;
     -fx-fill: #685dc635;
 }
 
 Arc:hover {
+    fill: #cbc8df35;
     -fx-fill: #cbc8df35;
 }
 
 Arc:pressed {
+    fill: #cbc8df6f;
     -fx-fill: #cbc8df6f;
 }
 
 .radio-button .radio {
+    border-width: 0px;
+    background-color: white;
     -fx-border-width: 0px;
     -fx-background-color: white;
 }
 
-.radio-button .radio:selected {
-    -fx-background-color: white;
-    -fx-background-image: null;
-}
-
-.radio-button -radio:armed {
-    -fx-background-color: white;
-    -fx-background-image: null;
-}
-
-.radio-button -radio:determinate {
-    -fx-background-color: white;
-    -fx-background-image: null;
-}
-
-.radio-button -radio:indeterminate {
-    -fx-background-color: white;
-    -fx-background-image: null;
-}
-
 .radio-button .dot {
+    padding: 8px;
     -fx-background-radius: 15px;
     -fx-padding: 8px;
+}
+
+#tina:hover {
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
 }

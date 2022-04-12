@@ -18,7 +18,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
    <children>
       <VBox layoutX="8.0" spacing="8.0">
          <children>
@@ -218,7 +218,7 @@
             <Font name="Calibri Bold" size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="160.0" fitWidth="150.0" layoutX="762.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="160.0" fitWidth="150.0" layoutX="762.0" layoutY="453.0" onMousePressed="#tina_pressed" fx:id="tina" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../tina.png" />
          </image>
