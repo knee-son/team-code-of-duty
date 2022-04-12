@@ -28,6 +28,7 @@ public class body_events implements Initializable {
     @FXML private ToggleGroup instrument;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
+    private boolean is_piano = true;
 
     // para fadeout
     private Timeline fadeout;
@@ -94,12 +95,18 @@ public class body_events implements Initializable {
     private void play(int key){
         // para ilis sa chord guide
         final String[] keystrings = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
-        String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
         String keystring = keystrings[key] + (is_major_3rd==0 ? "m":"") + ".png";
 
-        guide_View.setImage(new Image(dir+"pianoKey"+keystring));
-        guide_LetterKey.setImage(new Image(dir+"guideKeys_Letters/letterKey"+keystring));
-        guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboard"+keystring));
+        if (is_piano){
+            String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
+            guide_View.setImage(new Image(dir+"pianoKey"+keystring));
+            guide_LetterKey.setImage(new Image(dir+"guideKeys_Letters/letterKey"+keystring));
+            guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboard"+keystring));
+        }
+        else{
+            String dir = "file:Circle of Fifths/src/main/resources/guitar_guideChords/";
+            guide_View.setImage(new Image(dir+"guideChord"+keystring));
+        }
 
         if(current_chord[0] != 0)
             for(byte note: current_chord){
@@ -122,6 +129,11 @@ public class body_events implements Initializable {
         String instrument_name = s.substring(s.indexOf("'"));
 
         if(instrument_name.equals("'Piano'")){
+            is_piano = true;
+            String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
+            guide_View.setImage(new Image(dir+"pianoKeyDefault.png"));
+            guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboardDefault.png"));
+            
             for(int i=30; i<=97; i++)
                 note_array[i] =
                     new MediaPlayer( new Media( new File(
@@ -130,6 +142,12 @@ public class body_events implements Initializable {
                         i+".mp3").toURI().toString()));
         }
         else if(instrument_name.equals("'Guitar'")){
+            is_piano = false;
+            guide_LetterKey.setImage(null);
+            guide_Keyboard.setImage(null);
+            String dir = "file:Circle of Fifths/src/main/resources/guitar_guideChords/";
+            guide_View.setImage(new Image(dir+"guideChordDefault.png"));
+
             for(int i=40; i<=88; i++)
             note_array[i] =
                 new MediaPlayer( new Media( new File(
