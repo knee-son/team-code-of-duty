@@ -7,6 +7,14 @@ Arc {
     -fx-fill: #685dc635;
 }
 
+Arc:hover {
+    -fx-fill: #cbc8df35;
+}
+
+Arc:pressed {
+    -fx-fill: #cbc8df6f;
+}
+
 .radio-button .radio {
     -fx-border-width: 0px;
     -fx-background-color: white;

@@ -54,21 +54,18 @@ public class body_events implements Initializable {
         int j=0;
         for (Node arc : arcs_container.getChildrenUnmodifiable()){
             // makes each segment clickable
-            final Integer key = Integer.valueOf(j++*7%12);
+            final Integer final_j = j++;
 
             arc.setOnMousePressed(event -> {
                 //to know if minor or major is selected
-                int keySelect = 0;
 
-                if (event.getButton() == MouseButton.PRIMARY){
-                    is_major_3rd = 1;
-                    keySelect = 1;
-                }
-                else if (event.getButton() == MouseButton.SECONDARY){
-                    is_major_3rd = 0;
-                    keySelect = 2;
-                }       
-                play(key, keySelect);
+                if (event.getButton() == MouseButton.PRIMARY)
+                    if (final_j<12) {is_major_3rd=1; play((final_j)*7%12);}
+                    else {is_major_3rd=0; play((final_j)*7%12);}
+                else if (event.getButton() == MouseButton.SECONDARY)
+                    if (final_j<12) {is_major_3rd=0; play((final_j)*7%12);}
+                    else {is_major_3rd=1; play((final_j*7-1)%12);}
+
                 // andamon daan ang para fadeout
                 fadeout = new Timeline(
                     new KeyFrame(Duration.millis(200), new KeyValue(
@@ -88,7 +85,7 @@ public class body_events implements Initializable {
             switch_instrument(c.toString()));
     }
 
-    private void play(int key, int keySelected){
+    private void play(int key){
         // para ilis sa chord guide
         final String[] keystrings = {"C","Db","D","Eb","E","F","Gb","G","Ab","A","Bb","B"};
         String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";

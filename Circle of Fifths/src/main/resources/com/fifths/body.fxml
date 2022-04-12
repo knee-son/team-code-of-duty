@@ -24,7 +24,7 @@
          <children>
             <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#ffc200f0">
                <font>
-                  <Font name="Verdana" size="17.0" />
+                  <Font name="Impact" size="16.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -35,7 +35,7 @@
             </RadioButton>
             <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#ffc200f0" toggleGroup="$instrument">
                <font>
-                  <Font name="Verdana" size="17.0" />
+                  <Font name="Impact" size="16.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
