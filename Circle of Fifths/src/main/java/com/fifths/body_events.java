@@ -115,21 +115,23 @@ public class body_events implements Initializable {
         
         String instrument_name = s.substring(s.indexOf("'"));
 
-        if(instrument_name.equals("'Piano'"))
+        if(instrument_name.equals("'Piano'")){
             for(int i=30; i<=97; i++)
                 note_array[i] =
                     new MediaPlayer( new Media( new File(
                         "Circle of Fifths/src/main/"+
                         "resources/piano_notes/pno0"+
                         i+".mp3").toURI().toString()));
-        
-        else if(instrument_name.equals("'Guitar'"))
+        }
+        else if(instrument_name.equals("'Guitar'")){
             for(int i=40; i<=88; i++)
-                note_array[i] =
-                    new MediaPlayer( new Media( new File(
-                        "Circle of Fifths/src/main/"+
-                        "resources/guitar_notes/guitar_"+
-                        i+".wav").toURI().toString()));
+            note_array[i] =
+                new MediaPlayer( new Media( new File(
+                    "Circle of Fifths/src/main/"+
+                    "resources/guitar_notes/guitar_"+
+                    i+".wav").toURI().toString()));
+        }
+
     }
 
     private void octave_up(){if(octave!=84) octave+=12;}
