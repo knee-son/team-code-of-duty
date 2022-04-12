@@ -18,13 +18,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane stylesheets="@stylesheet.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="922.0" style="-fx-background-color: radial-gradient(center 100% 100%, radius 150%, #1f1d1c, #202022);" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fifths.body_events">
    <children>
-      <VBox layoutY="28.0" spacing="8.0">
+      <VBox layoutX="8.0" spacing="8.0">
          <children>
-            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#e8e42af0">
+            <RadioButton mnemonicParsing="false" opacity="0.91" selected="true" text="Piano" textFill="#ffc200f0">
                <font>
-                  <Font name="Calibri Bold" size="15.0" />
+                  <Font name="Verdana" size="17.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -33,9 +33,9 @@
                   <ToggleGroup fx:id="instrument" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#3cf0e4f0" toggleGroup="$instrument">
+            <RadioButton layoutX="45.0" layoutY="45.0" mnemonicParsing="false" opacity="0.91" text="Guitar" textFill="#ffc200f0" toggleGroup="$instrument">
                <font>
-                  <Font name="Calibri Bold" size="15.0" />
+                  <Font name="Verdana" size="17.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -119,7 +119,62 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="150.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="120.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="90.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
                   <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="60.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="30.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="330.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="300.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="270.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="240.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="210.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Arc>
+                  <Arc centerX="260.0" centerY="260.0" fill="#0000007c" layoutX="10.0" layoutY="10.0" length="30.0" radiusX="175.0" radiusY="175.0" startAngle="180.0" stroke="#bababae8" strokeType="INSIDE" strokeWidth="2.0" type="ROUND" GridPane.rowIndex="1">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
