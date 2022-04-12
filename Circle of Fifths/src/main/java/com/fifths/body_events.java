@@ -25,6 +25,7 @@ public class body_events implements Initializable {
     @FXML private ImageView guide_View;
     @FXML private ImageView guide_LetterKey;
     @FXML private ImageView guide_Keyboard;
+    @FXML private ImageView guide_ViewGuitar;
     @FXML private ToggleGroup instrument;
 
     private static MediaPlayer[] note_array = new MediaPlayer[98];
@@ -105,7 +106,8 @@ public class body_events implements Initializable {
         }
         else{
             String dir = "file:Circle of Fifths/src/main/resources/guitar_guideChords/";
-            guide_View.setImage(new Image(dir+"guideChord"+keystring));
+            guide_ViewGuitar.setImage(new Image(dir+"guideChord"+keystring));
+            guide_View.setImage(null);
         }
 
         if(current_chord[0] != 0)
@@ -133,6 +135,7 @@ public class body_events implements Initializable {
             String dir = "file:Circle of Fifths/src/main/resources/piano_guideKeys/";
             guide_View.setImage(new Image(dir+"pianoKeyDefault.png"));
             guide_Keyboard.setImage(new Image(dir+"guideKeyboard/guideKeyboardDefault.png"));
+            guide_ViewGuitar.setImage(null);
             
             for(int i=30; i<=97; i++)
                 note_array[i] =
@@ -146,7 +149,8 @@ public class body_events implements Initializable {
             guide_LetterKey.setImage(null);
             guide_Keyboard.setImage(null);
             String dir = "file:Circle of Fifths/src/main/resources/guitar_guideChords/";
-            guide_View.setImage(new Image(dir+"guideChordDefault.png"));
+            guide_ViewGuitar.setImage(new Image(dir+"guideChordDefault.png"));
+            guide_View.setImage(null);
 
             for(int i=40; i<=88; i++)
             note_array[i] =
