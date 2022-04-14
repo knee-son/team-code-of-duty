@@ -1,5 +1,7 @@
 # team-code-of-duty
 This is the Circle of Fifths App.
+
+
 Music has been an instrument created and performed in many ways and for different purposes. It can be for ourselves, for our loved ones, and others. One can have motivation to learn an instrument if he/she is inspired. However, people get into a roadblock in studying music in terms of Music Theory. In particular, the basic 24 variations of the chords would take them a long time to memorize if not without practice.  Fortunately, these barriers will break upon learning the concept of our project, the Circle of Fifths. The solution would be to aid their practice with an interactive app.
 This Software Requirements Specification document defines the overall software requirements for Circle of Fifths App. This document will cover the scope, perspective, functions, constraints, assumptions and functional requirements.
 
